@@ -1,7 +1,10 @@
-import Header from '../components/header';
+import Header from '../components/Header';
 import React, { useState } from "react";
 import {  useDispatch } from "react-redux";
 import { addUser } from "../slices/userSlice";
+import Button from '@mui/material/Button';
+import TextField from '@mui/material/TextField';
+import Navbar from '../components/Navbar'
 
 export default function Clock() {
   const [name, setName] = useState("");
@@ -17,10 +20,11 @@ export default function Clock() {
 
   return (
     <div>
+      <Navbar />
       <Header />
       <label>New User:</label>
-      <input type="text" value={name} onChange={handleChange} />
-      <button onClick={addNewUser}>Add</button>
+      <TextField id="outlined-basic" label="Outlined" variant="outlined" type="text" value={name} onChange={handleChange}/>
+      <Button variant="outlined" onClick={addNewUser}>Add</Button>
     </div>
   );
 }

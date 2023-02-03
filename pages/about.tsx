@@ -1,5 +1,7 @@
-import Header from "../components/header";
+import Header from "../components/Header";
 import { useSelector } from "react-redux";
+import Navbar from '../components/Navbar'
+
 
 
 const Page = () => {
@@ -7,6 +9,7 @@ const Page = () => {
 
   return (
     <div>
+      <Navbar />
       <Header />
       <h4>User List:</h4>
       <ol>
