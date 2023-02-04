@@ -1,23 +1,29 @@
-import Header from "../components/Header";
+import { responsiveFontSizes } from "@mui/material";
+import { fontSize } from "@mui/system";
 import { useSelector } from "react-redux";
 import Navbar from '../components/Navbar'
-
-
 
 const Page = () => {
   const { users } = useSelector(( state) => state.users);
 
   return (
-    <div>
+    <div className="container">
+    <div className="navbar">
       <Navbar />
-      <Header />
-      <h4>User List:</h4>
+    </div>
+    <div className="user-list" style={{
+        position: 'absolute', 
+        left: '50%', 
+        top: '30%',
+        transform: 'translate(-50%, -50%)'
+    }}>
+      <h4><b> User List:</b></h4>
       <ol>
         {users.map((user) => (
           <li>{user}</li>
         ))}
       </ol>
-
+      </div>
     </div>
   );
 };
