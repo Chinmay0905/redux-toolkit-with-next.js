@@ -1,4 +1,3 @@
-import Header from '../components/Header';
 import React, { useState } from "react";
 import { useDispatch } from "react-redux";
 import { addUser } from "../slices/userSlice";

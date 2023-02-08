@@ -1,5 +1,3 @@
-import { responsiveFontSizes } from "@mui/material";
-import { fontSize } from "@mui/system";
 import { useSelector } from "react-redux";
 import Navbar from '../components/Navbar'
 
